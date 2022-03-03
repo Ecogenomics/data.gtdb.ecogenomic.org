@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+
+  nginx:
+    container_name: nginx
+    image: nginx:1.21.6-alpine
+    restart: unless-stopped
+    environment:
+      - TZ=Australia/Brisbane
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Release data
+      - type: bind
+        source: /mnt/gtdb_data/releases
+        target: /var/www/data-gtdb/releases
+        read_only: true
+
+      # XLST configuration files
+      - type: bind
+        source: ./nginx/xml
+        target: /xml
+        read_only: true
+
+      # NGINX configuration files
+      - type: bind
+        source: ./nginx/nginx.conf
+        target: /etc/nginx/nginx.conf
+        read_only: true
+      - type: bind
+        source: ./nginx/templates
+        target: /etc/nginx/templates
+        read_only: true
+
+      # SSL bindings
+      - type: bind
+        source: /etc/letsencrypt
+        target: /etc/letsencrypt
+        read_only: true
+      - type: bind
+        source: /var/lib/letsencrypt
+        target: /var/lib/letsencrypt
+        read_only: true
+      - type: bind
+        source: /var/www/acme-challenge
+        target: /var/www/acme-challenge
+        read_only: true
