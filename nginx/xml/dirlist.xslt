@@ -162,7 +162,7 @@
                 </xsl:call-template>
             </td>
             <td class="n">
-                <a href="{str:encode-uri(current(),true())}">
+                <a class="plausible-event-name=Download" href="{str:encode-uri(current(),true())}">
                     <xsl:value-of select="."/>
                 </a>
             </td>
@@ -208,6 +208,7 @@
 
                 </style>
                 <title>GTDB Data - <xsl:value-of select="$path"/></title>
+                <script defer="1" data-domain="data.gtdb.ecogenomic.org" src="https://plausible.gtdb.ecogenomic.org/js/script.tagged-events.js">//</script>
             </head>
             <body>
                 <h1>GTDB Data</h1>
