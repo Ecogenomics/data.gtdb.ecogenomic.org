@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Ecogenomics/data.gtdb.ecogenomic.org/compare/v1.1.0...v1.2.0) (2023-03-28)
+
+
+### Features
+
+* **publications:** Add publications directory. ([99d3705](https://github.com/Ecogenomics/data.gtdb.ecogenomic.org/commit/99d37057f5ef5d39a81965a959cb733265aed94e))
+
 # [1.1.0](https://github.com/Ecogenomics/data.gtdb.ecogenomic.org/compare/v1.0.0...v1.1.0) (2023-01-30)
 
 
