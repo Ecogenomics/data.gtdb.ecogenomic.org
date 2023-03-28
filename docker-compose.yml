@@ -18,6 +18,11 @@ services:
         target: /var/www/data-gtdb/releases
         read_only: true
 
+      - type: bind
+        source: /mnt/gtdb_data/publications
+        target: /var/www/data-gtdb/publications
+        read_only: true
+
       # XLST configuration files
       - type: bind
         source: ./nginx/xml
