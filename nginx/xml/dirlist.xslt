@@ -208,7 +208,7 @@
 
                 </style>
                 <title>GTDB Data - <xsl:value-of select="$path"/></title>
-                <script defer="1" data-domain="data.gtdb.ecogenomic.org" src="https://plausible.gtdb.ecogenomic.org/js/script.tagged-events.js">//</script>
+                <script defer="1" data-domain="data.gtdb.ecogenomic.org" src="https://gtdb-stats.ecogenomic.org/js/script.tagged-events.js">//</script>
             </head>
             <body>
                 <h1>GTDB Data</h1>
